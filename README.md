@@ -2,7 +2,7 @@
 
 Welcome to the official repository of **Team Mindax LLC**. This repository, named `team-mindax-official`, contains **only our official distributions** of applications and projects. All files, releases, and updates here are the verified versions provided by **Team Mindax LLC**.  
 
-> **Note:** All our official apps and distributions are also available on **APKPure**.
+> **Note:** All our official apps and distributions are also available on **APKPure**. Always download apps from this repository, APKPure, or MediaFire links provided below to ensure authenticity and safety.
 
 ---
 
@@ -10,7 +10,7 @@ Welcome to the official repository of **Team Mindax LLC**. This repository, name
 
 This repository hosts all our current and past projects. Each project includes its description, version history, and download links.  
 
-> **Important:** Only download our apps from this repository or APKPure to ensure safety, authenticity, and access to official versions.
+> **Important:** Only download our apps from this repository, APKPure, or official MediaFire links to guarantee authenticity.
 
 ---
 
@@ -18,9 +18,13 @@ This repository hosts all our current and past projects. Each project includes i
 
 All official apps have **downloadable versions** on GitHub Releases:
 
-- You can find the latest releases on the [Releases page](https://github.com/<your-username>/team-mindax-official/releases).  
+- You can find the latest releases here: [GitHub Releases](https://github.com/origin-svg/team-mindax-official/releases)  
 
-> Always download apps from this repository or APKPure to guarantee authenticity.
+**Viewify v1.1:**  
+
+[Download APK (MediaFire)](https://www.mediafire.com/file/c8e6y9072wp5l9u/Viewify_1_1.0_mod+(2)_sign.apk/file)
+
+> Always download apps from this repository, APKPure, or official MediaFire links to guarantee authenticity.
 
 ---
 
