@@ -1,0 +1,125 @@
+# Privacy Policy - Team Mindax LLC
+
+**Effective Date:** March 17, 2026  
+
+Team Mindax LLC (“we,” “our,” or “us”) respects your privacy and is committed to protecting the personal information you share with us. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you access our applications, repositories, or services, including official app distributions, GitHub repositories, APK releases, and unofficial ports of software ("Services").  
+
+By using our Services, you acknowledge that you have read and understood this Privacy Policy. If you do not agree with the terms, please do not use our Services.
+
+---
+
+## 1. Information We Collect
+
+We may collect information in a variety of ways, including but not limited to:
+
+1. **Personal Information:**  
+   - Name, email address, contact information, and any other data you provide when communicating with us or signing up for notifications.
+
+2. **Technical and Usage Data:**  
+   - Device type, operating system, IP address, browser type, access times, pages viewed, downloads, and interaction patterns with our Services.  
+   - Log files, crash reports, analytics, and error messages that allow us to optimize performance and security.
+
+3. **Third-Party Data:**  
+   - If you interact with our Services through third-party platforms such as GitHub or APKPure, we may receive information from those platforms in accordance with their privacy practices.
+
+---
+
+## 2. How We Use Your Information
+
+We use collected information to:  
+
+- Provide, operate, and maintain our Services.  
+- Improve, personalize, and optimize user experience.  
+- Analyze usage trends and technical performance.  
+- Communicate updates, new releases, and security advisories.  
+- Investigate unauthorized access, abuse, or potential threats.  
+- Comply with legal obligations and enforce our Terms of Service.  
+
+We do **not sell or trade** your personal information to third parties.
+
+---
+
+## 3. Distribution of Applications and Ports
+
+1. **Official Apps:**  
+   - Our official applications are distributed through verified channels such as GitHub Releases and APKPure.  
+   - We provide direct download links from trusted servers or repositories to ensure authenticity and security.
+
+2. **Unofficial Ports:**  
+   - We may also distribute unofficial ports or modified versions of applications.  
+   - These ports may be created for testing, development, or community purposes.  
+   - Users should understand that unofficial ports may carry additional risks, and Team Mindax LLC is not responsible for security or data breaches resulting from unofficial distributions.  
+
+> Always verify the source of any download to ensure authenticity and security.
+
+---
+
+## 4. How We Share Information
+
+We do not sell your information. However, we may share information in limited scenarios, including:  
+
+- **With service providers:** To perform hosting, analytics, or communication services.  
+- **For legal compliance:** To respond to lawful requests, enforce policies, or protect rights and property.  
+- **Business transactions:** In connection with mergers, acquisitions, or asset transfers.  
+
+---
+
+## 5. Data Security
+
+We implement reasonable technical and organizational measures to protect information from unauthorized access, alteration, disclosure, or destruction.  
+
+- All official releases are digitally verified when possible.  
+- Unofficial ports are distributed with explicit warnings regarding potential risks.  
+- Despite precautions, no method of transmission over the Internet or electronic storage is completely secure.  
+
+---
+
+## 6. User Rights and Control
+
+Depending on your jurisdiction, you may have rights regarding your personal data, including:  
+
+- Access, correction, or deletion of personal data.  
+- Objecting to processing or requesting restrictions.  
+- Withdrawing consent where applicable.  
+
+Requests can be made by contacting **Next Level Com** through the email provided in our contact information.
+
+---
+
+## 7. Third-Party Services
+
+Our Services may include links to third-party platforms, repositories, or resources. Team Mindax LLC is **not responsible** for the privacy practices or content of these third parties. Users are encouraged to read third-party privacy policies when accessing such services.
+
+---
+
+## 8. Cookies and Tracking
+
+Our Services may use analytics and tracking tools to monitor usage and improve performance.  
+
+- We may collect device and usage metrics automatically.  
+- No personally identifiable information is collected via cookies without your consent.  
+- You may disable cookies or tracking features through your device or browser settings, but some functionality may be limited.
+
+---
+
+## 9. Updates to Privacy Policy
+
+We reserve the right to update this Privacy Policy at any time to reflect changes in our practices, legal requirements, or technological improvements.  
+
+- Updates will be posted on this repository and will include an **effective date**.  
+- Users are encouraged to review this Privacy Policy periodically.
+
+---
+
+## 10. Contact Information
+
+For questions, concerns, or requests regarding this Privacy Policy or your data, contact us at:
+
+- **Email:** Next Level Com  
+- **YouTube:** [BagelCatChefs](https://youtube.com/@bagelcatchefsito?si=SzhG7i2N5r5cTROj)
+
+---
+
+**Team Mindax LLC © 2026. All rights reserved.**  
+
+**Team Mindax LLC** and all associated logos, product names, and designs are trademarks or registered trademarks of Team Mindax LLC. Unauthorized use, reproduction, or distribution of any content, code, or assets contained in our Services is strictly prohibited.
