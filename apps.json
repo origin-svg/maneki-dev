@@ -1,0 +1,19 @@
+{
+  "apps": [
+    {
+      "name": "DotArt",
+      "platform": "Android",
+      "status": "Beta"
+    },
+    {
+      "name": "Viewify",
+      "platform": "Android",
+      "status": "Stable"
+    },
+    {
+      "name": "Purrfect Day",
+      "platform": "Android",
+      "status": "Experimental"
+    }
+  ]
+}
