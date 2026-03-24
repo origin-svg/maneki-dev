@@ -1,4 +1,4 @@
-# Maneki & Co. LLC — Everything You Need To Know About Us ♥️ (:3)
+# Maneki & Co. LLC — Everything You Need To Know About Us ♥️ (Check WIKI FOR MORE)
 
 **Maneki & Co. LLC**  
 **招き株式会社 (Maneki Kabushiki Gaisha)**
