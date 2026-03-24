@@ -234,6 +234,60 @@ See the full project list here:
 ![Version](https://img.shields.io/badge/version-beta-blue)
 ![Maintained](https://img.shields.io/badge/maintained-yes-brightgreen)
 
+# 📝 Changelog / Registro de Cambios
+
+---
+
+## 🌐 English / Inglés
+
+### [Viewify v1.0] 🚀
+- First official release  
+- Internalization added to repository (multi-language support)  
+- Stable Android release  
+
+### [DotArt Experimental]
+- Experimenting with AI Tools for sprite generation and workflow improvements  
+- Minor UI/UX tweaks
+
+---
+
+## 🌎 Español / Spanish
+
+### [Viewify v1.0] 🚀
+- Primer lanzamiento oficial  
+- Se ha añadido internacionalización al repositorio (soporte multilenguaje)  
+- Release estable para Android  
+
+### [DotArt Experimental]
+- Se ha estado experimentando con herramientas de IA para generación de sprites y mejoras del flujo de trabajo  
+- Ajustes menores de UI/UX
+
+---
+
+## 🇩🇪 Deutsch / Alemán
+
+### [Viewify v1.0] 🚀
+- Erste offizielle Version  
+- Internalisierung im Repository hinzugefügt (Mehrsprachigkeit)  
+- Stabile Android-Version  
+
+### [DotArt Experimental]
+- Experimente mit AI-Tools zur Sprite-Generierung und Workflow-Verbesserung  
+- Kleine UI/UX-Anpassungen
+
+---
+
+## 🇫🇷 Français / French
+
+### [Viewify v1.0] 🚀
+- Première version officielle  
+- Internationalisation ajoutée au dépôt (support multilingue)  
+- Release stable Android  
+
+### [DotArt Experimental]
+- Expérimentation avec des outils AI pour la génération de sprites et l’amélioration du workflow  
+- Petites modifications UI/UX
+
 ---
 
 © 2026 Maneki & Co. LLC (招き株式会社)
