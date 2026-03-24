@@ -1,8 +1,13 @@
 # Maneki & Co. LLC — Everything You Need To Know About Us ♥️ (Check WIKI FOR MORE)
+🌐 Multilenguaje / Bilingual Support
+Español:
+Todas nuestras aplicaciones y lanzamientos incluyen soporte multilingüe. Esto significa que los usuarios pueden disfrutar de las apps en varios idiomas, y la documentación también está disponible de forma bilingüe o multilanguage para garantizar accesibilidad global.
 
+English:
+All our applications and releases include multilingual support. This means users can enjoy the apps in multiple languages, and documentation is also available bilingually or in multiple languages to ensure global accessibility.
 
-
-🌐 **Idiomas / Languages:** [Español](docs/es/README.md)
+🌐 **Idiomas / Languages:**  
+[Español](./docs/es/README.md) | [Français](./docs/fr/README.md) | [Deutsch](./docs/de/README.md) | [English](./docs/en/README.md)
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/origin-svg/maneki-dev)
 ![GitHub forks](https://img.shields.io/github/forks/origin-svg/maneki-dev)
