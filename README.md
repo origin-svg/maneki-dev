@@ -1,61 +1,203 @@
-# Team Mindax LLC - Official Repository
+# Maneki & Co. LLC — Everything You Need To Know About Us ♥️ (:3)
 
-Welcome to the official repository of **Team Mindax LLC**. This repository, named `team-mindax-official`, contains **only our official distributions** of applications and projects. All files, releases, and updates here are the verified versions provided by **Team Mindax LLC**.  
+**Maneki & Co. LLC**  
+**招き株式会社 (Maneki Kabushiki Gaisha)**
 
-> **Note:** All our official apps and distributions are also available on **APKPure**. Always download apps from this repository, APKPure, or MediaFire links provided below to ensure authenticity and safety.
+This repository serves as the official portfolio and distribution hub for software developed by **Maneki & Co. LLC**. It contains verified builds, documentation, and release information for applications, experimental tools, and digital projects created and maintained by the studio.
 
----
-
-## 🌟 Projects & Apps
-
-This repository hosts all our current and past projects. Each project includes its description, version history, and download links.  
-
-> **Important:** Only download our apps from this repository, APKPure, or official MediaFire links to guarantee authenticity.
+All releases published here represent official distributions. Users are encouraged to download software only from this repository or other official mirrors referenced here to ensure authenticity and security.
 
 ---
 
-## 📦 Releases
+## About the Company
 
-All official apps have **downloadable versions** on GitHub Releases:
+Maneki & Co. LLC is an independent software studio focused on developing lightweight applications, experimental tools, and accessible web technologies.
 
-- You can find the latest releases here: [GitHub Releases](https://github.com/origin-svg/team-mindax-official/releases)  
+Our philosophy emphasizes:
 
-**Viewify v1.1:**  
+- simplicity  
+- reliability  
+- thoughtful design  
+- experimentation in software development  
 
-[Download APK (MediaFire)](https://www.mediafire.com/file/c8e6y9072wp5l9u/Viewify_1_1.0_mod+(2)_sign.apk/file)
-
-> Always download apps from this repository, APKPure, or official MediaFire links to guarantee authenticity.
-
----
-
-## 📬 Contact
-
-For questions, collaborations, or feedback, reach us via:
-
-- **Email:** Next Level Com  
-- **YouTube:** [BagelCatChefs](https://youtube.com/@bagelcatchefsito?si=SzhG7i2N5r5cTROj)  
+The name **Maneki (招き)** originates from the Japanese word meaning *to invite* or *to welcome*. The name reflects the studio’s goal of inviting creativity, experimentation, and technological exploration.
 
 ---
 
-## ⚡ Upcoming Projects
+## Technology Stack
 
-- New interactive web apps  
-- Educational tools or games  
-- Improvements to existing projects  
+### Programming Languages
+
+The studio develops software using a variety of programming languages depending on the project requirements.
+
+- JavaScript  
+- Python  
+- Java  
+- Kotlin  
+- C#  
+- HTML  
+- CSS  
+- Lua  
+
+### Development Tools
+
+Typical tools used in the development workflow include:
+
+- Visual Studio Code  
+- Git  
+- GitHub  
+- Android SDK  
+- Node.js  
+- Web APIs  
+- JSON-based configuration systems  
+
+### Areas of Experience
+
+Projects developed by Maneki & Co. LLC generally fall into the following areas:
+
+- Mobile application development  
+- Web application development  
+- User interface and user experience experimentation  
+- Lightweight developer utilities  
+- Software distribution and version management  
+- Experimental software concepts  
 
 ---
 
-### 💡 Notes
+## Repository Structure
 
-- This repository is designed to **showcase and distribute our official apps clearly and professionally**.  
-- Each project has its **own release, description, and update history**.  
-- You can use this repository as a base for **GitHub Pages** to showcase your official apps online.
+The repository is organized to provide clear access to projects, documentation, and release assets.
+
 
 ---
 
-© 2026 **Team Mindax LLC**. All rights reserved.  
+## Project Portfolio
 
-**Team Mindax LLC** and all associated logos, product names, and designs are trademarks or registered trademarks of Team Mindax LLC.  
-Unauthorized use, reproduction, or distribution of any content, code, or assets contained in this repository is strictly prohibited.  
+| Project | Description | Platform | Status |
+|-------|-------------|----------|-------|
+| Viewify | Lightweight mobile application | Android | Active |
+| DotArt | PixelArt studio application for creating and editing pixel artwork | Android | Active |
+| Purrfect Day | Cat-themed mobile application focused on relaxing and cute interactions | Android | Active |
 
-For permissions, licensing, or business inquiries, please contact: **Next Level Com**.
+Each project typically includes:
+
+- Documentation  
+- Version history  
+- Source files or build artifacts  
+- Official download links  
+
+---
+
+## Software Releases
+
+Official releases are published through **GitHub Releases**.
+
+Latest releases can be accessed at:
+
+https://github.com/origin-svg/team-mindax-official/releases
+
+Example release:
+
+**Viewify v1.1**
+
+MediaFire mirror:
+
+https://www.mediafire.com/file/c8e6y9072wp5l9u/Viewify_1_1.0_mod+(2)_sign.apk/file
+
+Official mirrors may also include APKPure when specified.
+
+---
+
+## Architecture Philosophy
+
+Software developed by Maneki & Co. LLC generally follows several architectural principles:
+
+- modular design  
+- lightweight dependencies  
+- platform efficiency  
+- simple configuration systems  
+- maintainable code structure  
+
+Where applicable, projects may implement:
+
+- component-based architecture  
+- REST-based APIs  
+- JSON-driven configuration  
+- modular UI systems  
+
+---
+
+## Contribution Guidelines
+
+External contributions may be accepted depending on the project.
+
+Before submitting contributions, contributors should:
+
+1. Fork the repository  
+2. Create a feature branch  
+3. Follow existing code style conventions  
+4. Submit a pull request describing the changes  
+
+Contributions should focus on:
+
+- bug fixes  
+- documentation improvements  
+- performance improvements  
+- feature enhancements consistent with project goals  
+
+All contributions are subject to review.
+
+---
+
+## Security Policy
+
+If you discover a security vulnerability within any Maneki & Co. LLC software, please report it responsibly.
+
+Do not publicly disclose security issues before they are reviewed.
+
+Security reports should include:
+
+- description of the vulnerability  
+- steps to reproduce  
+- affected version  
+- potential impact  
+
+Reports can be sent to the contact address listed below.
+
+---
+
+## Development Roadmap
+
+Future development may include:
+
+- interactive web applications  
+- educational software tools  
+- lightweight creative utilities  
+- experimental development frameworks  
+- improvements to existing applications  
+
+The roadmap may evolve as new ideas and research areas emerge.
+
+---
+
+## Contact
+
+For questions, collaboration inquiries, or feedback:
+
+Email  
+Next Level Com
+
+YouTube  
+https://youtube.com/@bagelcatchefsito
+
+---
+
+## Legal Notice
+
+© 2026 **Maneki & Co. LLC (招き株式会社)**
+
+All product names, source code, designs, and assets are the intellectual property of **Maneki & Co. LLC** unless otherwise stated.
+
+Unauthorized reproduction, redistribution, or commercial use of any materials contained in this repository is prohibited without written permission.
+
+For licensing or permission requests, please contact **Next Level Com**.
