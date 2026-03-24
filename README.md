@@ -211,6 +211,12 @@ For licensing or permission requests, please contact **Next Level Com**.
 
 ---
 
+## Projects
+
+See the full project list here:
+
+[Projects](PROJECTS.md)
+
 ## Repository Status
 
 ![Platform](https://img.shields.io/badge/platform-Android-green)
