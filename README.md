@@ -207,3 +207,18 @@ All product names, source code, designs, and assets are the intellectual propert
 Unauthorized reproduction, redistribution, or commercial use of any materials contained in this repository is prohibited without written permission.
 
 For licensing or permission requests, please contact **Next Level Com**.
+
+
+---
+
+## Repository Status
+
+![Platform](https://img.shields.io/badge/platform-Android-green)
+![Status](https://img.shields.io/badge/status-active-success)
+![License](https://img.shields.io/badge/license-proprietary-red)
+![Version](https://img.shields.io/badge/version-beta-blue)
+![Maintained](https://img.shields.io/badge/maintained-yes-brightgreen)
+
+---
+
+© 2026 Maneki & Co. LLC (招き株式会社)
