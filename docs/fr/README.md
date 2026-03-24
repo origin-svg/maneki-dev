@@ -1,6 +1,7 @@
 # Maneki & Co. LLC — Tout ce que vous devez savoir sur nous ♥️
 
-🌐 **Langues / Languages:** [Français](docs/fr/README.md) | [Español](docs/es/README.md) | [English](docs/en/README.md)
+🌐 **Langues / Languages:**  
+[Español](../es/README.md) | [Français](./README.md) | [Deutsch](../de/README.md) | [English](../en/README.md)
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/origin-svg/maneki-dev)  
 ![GitHub forks](https://img.shields.io/github/forks/origin-svg/maneki-dev)  
