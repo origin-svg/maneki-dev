@@ -1,5 +1,9 @@
 # Maneki & Co. LLC — Everything You Need To Know About Us ♥️ (Check WIKI FOR MORE)
 
+
+
+🌐 **Idiomas / Languages:** [Español](docs/es/README.md)
+
 ![GitHub Repo stars](https://img.shields.io/github/stars/origin-svg/maneki-dev)
 ![GitHub forks](https://img.shields.io/github/forks/origin-svg/maneki-dev)
 ![GitHub issues](https://img.shields.io/github/issues/origin-svg/maneki-dev)
