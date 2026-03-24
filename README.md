@@ -288,6 +288,10 @@ See the full project list here:
 - Expérimentation avec des outils AI pour la génération de sprites et l’amélioration du workflow  
 - Petites modifications UI/UX
 
+
+📜 See the full [Changelog / Registro de cambios](./CHANGELOG.md)
+
+
 ---
 
 © 2026 Maneki & Co. LLC (招き株式会社)
