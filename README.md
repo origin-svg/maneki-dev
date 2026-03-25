@@ -6,7 +6,7 @@ Todas nuestras aplicaciones y lanzamientos incluyen soporte multilingüe. Esto s
 English:
 All our applications and releases include multilingual support. This means users can enjoy the apps in multiple languages, and documentation is also available bilingually or in multiple languages to ensure global accessibility.
 
-THIS REPO USES AUTOMATIZATION FOR SOME LANGUAGES. IF YOU WANT MORE ACCURATE TRANSLATIONS, CHECK OUT THE ONES THAT ARE PRESETS
+THIS REPO USES AUTOMATIZATION FOR SOME LANGUAGES. IF YOU WANT MORE ACCURATE TRANSLATIONS, CHECK OUT THE ONES THAT ARE PRESETS. We do not have full control of it, please contact us if the translation has any problems. Keep It Safe!
 
 🌐 **Idiomas / Languages:**  
 [Español](./docs/es/README.md) | [Français](./docs/fr/README.md) | [Deutsch](./docs/de/README.md) | [English](./docs/en/README.md)
