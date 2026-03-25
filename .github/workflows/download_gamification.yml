@@ -2,7 +2,7 @@ name: Download Gamification
 
 on:
   schedule:
-    - cron: "0 0 * * *"  # runs daily at midnight
+    - cron: "0 0 * * *"  # daily at midnight
   push:
     branches:
       - main
@@ -27,11 +27,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
 
-      # Run download points script
+      # Run the download points script
       - name: Run download points script
         run: python scripts/update_download_points.py
 
-      # Commit & push using GITHUB_TOKEN
+      # Commit & Push using GITHUB_TOKEN
       - name: Commit & Push
         run: |
           git config --global user.name "GitHub Actions Bot"
