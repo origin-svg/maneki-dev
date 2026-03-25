@@ -26,10 +26,13 @@ jobs:
           python-version: '3.11'
 
       ## Step 3: Install Argos Translate and language models
-      - name: Install Argos Translate
+      - name: Install Argos Translate and language models
         run: |
           python -m pip install --upgrade pip
           pip install argostranslate
+          # English base model
+          python -m argostranslate.package install https://www.argosopentech.com/packages/translate-en.argosmodel
+          # Translation models
           python -m argostranslate.package install https://www.argosopentech.com/packages/translate-en_es.argosmodel
           python -m argostranslate.package install https://www.argosopentech.com/packages/translate-en_fr.argosmodel
           python -m argostranslate.package install https://www.argosopentech.com/packages/translate-en_de.argosmodel
