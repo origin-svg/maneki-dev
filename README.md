@@ -1,4 +1,4 @@
-# Maneki & Co. LLC — Everything You Need To Know About Us ♥️ (Check WIKI FOR MORE)
+# Maneki & Co. LLC (Team Mindax LLC) — Everything You Need To Know About Us ♥️ (Check WIKI FOR MORE)
 ![Download Points](https://img.shields.io/badge/Points-1234-brightgreen)
 
 
