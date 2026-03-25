@@ -1,73 +1,80 @@
 import os
-import requests
 import argostranslate.package
 import argostranslate.translate
 
-# ----------------------------
-# CONFIGURATION
+# Files to translate
 files_to_translate = ["README.md", "CHANGELOG.md"]
 
+# Target languages
 languages = {
     "es": "es",  # Spanish
     "fr": "fr",  # French
     "de": "de"   # German
 }
 
-# Warning note to prepend to translations
+# Add a warning note at top of translated docs
 warning_note = (
     "> **Note:** Automatic translations are provided for convenience. "
     "They may not be 100% accurate. For the most reliable content, please refer "
-    "to the original documentation in English or the preset translations.\n\n"
+    "to the original documentation in English or preset trusted translations.\n\n"
 )
 
-# Argos Translate model URLs
-model_urls = [
-    "https://www.argosopentech.com/packages/translate-en.argosmodel",
-    "https://www.argosopentech.com/packages/translate-en_es.argosmodel",
-    "https://www.argosopentech.com/packages/translate-en_fr.argosmodel",
-    "https://www.argosopentech.com/packages/translate-en_de.argosmodel"
-]
+# ---------------------------
+# Install models via package index
+# ---------------------------
+# Update package index
+argostranslate.package.update_package_index()
 
-# INSTALL MODELS
-for url in model_urls:
-    package_filename = os.path.basename(url)
-    if not os.path.exists(package_filename):
-        print(f"Downloading {package_filename}...")
-        r = requests.get(url)
-        r.raise_for_status()
-        with open(package_filename, "wb") as f:
-            f.write(r.content)
-    print(f"Installing {package_filename}...")
-    argostranslate.package.install_from_path(package_filename)
+# Get all available packages
+available_packages = argostranslate.package.get_available_packages()
 
-# LOAD INSTALLED LANGUAGES
-installed_languages = argostranslate.translate.get_installed_languages()
+# List of language pairs we want (from en → XX)
+pairs = [( "en", "es" ), ( "en", "fr" ), ( "en", "de" )]
 
-# Validate source language (English)
-source_lang_list = [lang for lang in installed_languages if lang.code == "en"]
+for from_code, to_code in pairs:
+    # Find the matching package
+    pkg = next(
+        (
+            p
+            for p in available_packages
+            if p.from_code == from_code and p.to_code == to_code
+        ),
+        None
+    )
+    if pkg:
+        path = pkg.download()
+        argostranslate.package.install_from_path(path)
+
+# ---------------------------
+# Load installed languages
+# ---------------------------
+installed = argostranslate.translate.get_installed_languages()
+
+# Get English language object
+source_lang_list = [lang for lang in installed if lang.code == "en"]
 if not source_lang_list:
-    raise Exception("English source language not installed in Argos Translate")
+    raise Exception("English language not installed after package install")
 source_lang = source_lang_list[0]
 
-# ----------------------------
-# HELPER
+# Helper: split text into chunks
 def chunk_text(text, max_len=1000):
     return [text[i:i+max_len] for i in range(0, len(text), max_len)]
 
-# TRANSLATE FILES
+# ---------------------------
+# Translate files
+# ---------------------------
 for file_path in files_to_translate:
     if not os.path.exists(file_path):
-        print(f"File {file_path} does not exist, skipping...")
+        print(f"{file_path} not found, skipping")
         continue
 
     with open(file_path, "r", encoding="utf-8") as f:
         content = f.read()
 
     for lang_code, target_code in languages.items():
-        # Validate target language
-        target_lang_list = [lang for lang in installed_languages if lang.code == target_code]
+        target_lang_list = [lang for lang in installed if lang.code == target_code]
         if not target_lang_list:
-            print(f"Target language '{target_code}' not installed, skipping...")
+            print(f"Target language '{target_code}' missing, skipping")
             continue
         target_lang = target_lang_list[0]
 
@@ -75,11 +82,11 @@ for file_path in files_to_translate:
         translated_chunks = [translation.translate(chunk) for chunk in chunk_text(content)]
         translated_text = warning_note + "\n".join(translated_chunks)
 
-        output_dir = f"docs/{lang_code}"
-        os.makedirs(output_dir, exist_ok=True)
-        output_file = os.path.join(output_dir, file_path)
+        out_dir = f"docs/{lang_code}"
+        os.makedirs(out_dir, exist_ok=True)
+        out_file = os.path.join(out_dir, file_path)
 
-        with open(output_file, "w", encoding="utf-8") as out_f:
+        with open(out_file, "w", encoding="utf-8") as out_f:
             out_f.write(translated_text)
 
         print(f"{file_path} translated to {lang_code}")
