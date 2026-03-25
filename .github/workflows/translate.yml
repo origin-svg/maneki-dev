@@ -10,42 +10,30 @@ on:
       - 'docs/**'
 
 jobs:
-  translate_docs:
-    name: Translate README and CHANGELOG
+  translate:
     runs-on: ubuntu-latest
-    steps:
 
-      ## Step 1: Checkout repository
-      - name: Checkout Repository
+    steps:
+      - name: Checkout
         uses: actions/checkout@v3
 
-      ## Step 2: Setup Python
-      - name: Setup Python 3.11
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
 
-      ## Step 3: Install Argos Translate and language models
-      - name: Install Argos Translate and language models
+      - name: Install Argos Translate
         run: |
           python -m pip install --upgrade pip
           pip install argostranslate
-          # English base model
-          python -m argostranslate.package install https://www.argosopentech.com/packages/translate-en.argosmodel
-          # Translation models
-          python -m argostranslate.package install https://www.argosopentech.com/packages/translate-en_es.argosmodel
-          python -m argostranslate.package install https://www.argosopentech.com/packages/translate-en_fr.argosmodel
-          python -m argostranslate.package install https://www.argosopentech.com/packages/translate-en_de.argosmodel
 
-      ## Step 4: Run translation script
-      - name: Translate Documentation
+      - name: Run translation script
         run: python scripts/translate_docs_argos.py
 
-      ## Step 5: Commit translated files
-      - name: Commit Translated Files
+      - name: Commit translations
         run: |
           git config --global user.name "GitHub Actions Bot"
           git config --global user.email "actions@github.com"
           git add docs/
-          git commit -m "Automatic translation update" || echo "No changes to commit"
+          git commit -m "Automatic translation updated" || echo "No changes to commit"
           git push origin main
