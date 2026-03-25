@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 
 <head>
@@ -102,6 +102,15 @@ font-family:monospace;
 overflow:auto;
 }
 
+#sketchpad{
+background:#d0d0d0;
+border-radius:8px;
+border:1px solid #999;
+touch-action:none;
+display:block;
+margin-top:15px;
+}
+
 footer{
 background:#111;
 color:#aaa;
@@ -112,6 +121,7 @@ margin-top:60px;
 button{
 padding:7px 12px;
 margin-top:10px;
+cursor:pointer;
 }
 
 </style>
@@ -136,6 +146,7 @@ mobile applications and creative digital tools.
 <a href="#releases">Releases</a>
 <a href="#docs">Documentation</a>
 <a href="#community">Community</a>
+<a href="#sketch">Sketch</a>
 
 </nav>
 
@@ -206,14 +217,7 @@ Development Status
 DotArt is a lightweight pixel art studio designed for Android devices.
 The goal of DotArt is to provide a fast and responsive pixel art creation
 environment that allows artists to focus on creativity instead of complex
-software interfaces. The application is optimized for low memory usage,
-fast startup times, and efficient rendering performance.
-</p>
-
-<p>
-The architecture of DotArt is centered around modular drawing tools and
-JSON-based project storage, allowing artwork to be exported and shared
-easily between devices or collaborative workflows.
+software interfaces.
 </p>
 
 <a class="download"
@@ -227,8 +231,7 @@ Download DotArt Beta
 
 <p>
 Viewify is a lightweight mobile application built with efficiency and
-simplicity as primary design goals. The application emphasizes a clean
-interface design and optimized performance across a wide range of devices.
+simplicity as primary design goals.
 </p>
 
 <a class="download"
@@ -242,9 +245,7 @@ Download Viewify
 
 <p>
 Purrfect Day is an experimental relaxing mobile application focused on
-creating calm digital environments using minimal visual interaction and
-soft UI elements. The project explores the concept of software as a
-relaxation tool rather than purely a productivity tool.
+creating calm digital environments using minimal visual interaction.
 </p>
 
 <a class="download"
@@ -302,21 +303,7 @@ Download Purrfect Day
 
 <p>
 The Maneki software ecosystem follows a lightweight modular architecture
-that prioritizes simplicity, performance, and maintainability. Each
-application is built with minimal dependencies in order to maintain
-small binary sizes and fast startup performance.
-</p>
-
-<p>
-Applications typically follow a layered architecture model that separates
-user interface components from core logic and data storage layers.
-This approach ensures that application features remain maintainable
-while allowing future extensions to be implemented with minimal changes
-to the existing codebase.
-</p>
-
-<p>
-Typical internal structure used in Maneki applications:
+that prioritizes simplicity, performance, and maintainability.
 </p>
 
 <div class="docs">
@@ -335,11 +322,6 @@ Used in creative applications such as DotArt
 for efficient pixel rendering.
 
 </div>
-
-<p>
-Full documentation and developer notes are maintained in the project
-repository hosted on GitHub.
-</p>
 
 <p>
 
@@ -366,17 +348,33 @@ https://github.com/origin-svg/maneki-dev/wiki
 <h2>Community and Development Discussions</h2>
 
 <p>
-Community discussions allow users, contributors, and developers to
-exchange feedback, ideas, and feature requests. These discussions
-help guide the development direction of the project.
-</p>
-
-<p>
 
 Community Forum  
 https://github.com/origin-svg/maneki-dev/discussions
 
 </p>
+
+</div>
+
+</section>
+
+<section id="sketch">
+
+<div class="card">
+
+<h2>Offline Sketch Pad</h2>
+
+<p>
+A minimal offline drawing canvas. Use touch or mouse to draw.
+The brush automatically cycles through colors creating a
+rainbow scratching effect.
+</p>
+
+<canvas id="sketchpad" width="900" height="400"></canvas>
+
+<br>
+
+<button onclick="clearCanvas()">Clear Canvas</button>
 
 </div>
 
@@ -407,8 +405,64 @@ function toggleDark(){
 document.body.classList.toggle("dark")
 }
 
+const canvas = document.getElementById("sketchpad")
+const ctx = canvas.getContext("2d")
+
+let drawing=false
+let hue=0
+
+function start(e){
+drawing=true
+draw(e)
+}
+
+function stop(){
+drawing=false
+ctx.beginPath()
+}
+
+function draw(e){
+
+if(!drawing) return
+
+const rect=canvas.getBoundingClientRect()
+
+let x=(e.touches?e.touches[0].clientX:e.clientX)-rect.left
+let y=(e.touches?e.touches[0].clientY:e.clientY)-rect.top
+
+ctx.lineWidth=6
+ctx.lineCap="round"
+
+ctx.strokeStyle=`hsl(${hue},100%,50%)`
+
+ctx.lineTo(x,y)
+ctx.stroke()
+
+ctx.beginPath()
+ctx.moveTo(x,y)
+
+hue++
+
+if(hue>360){
+hue=0
+}
+
+}
+
+canvas.addEventListener("mousedown",start)
+canvas.addEventListener("mouseup",stop)
+canvas.addEventListener("mouseout",stop)
+canvas.addEventListener("mousemove",draw)
+
+canvas.addEventListener("touchstart",start)
+canvas.addEventListener("touchend",stop)
+canvas.addEventListener("touchmove",draw)
+
+function clearCanvas(){
+ctx.clearRect(0,0,canvas.width,canvas.height)
+}
+
 </script>
 
 </body>
-
-</html>
+  </html>
