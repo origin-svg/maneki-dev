@@ -102,13 +102,35 @@ font-family:monospace;
 overflow:auto;
 }
 
+/* CANVAS */
+
 #sketchpad{
-background:#d0d0d0;
 border-radius:8px;
-border:1px solid #999;
+border:1px solid #6b7686;
 touch-action:none;
 display:block;
 margin-top:15px;
+width:100%;
+max-width:900px;
+
+/* base color */
+background-color:#2b3440;
+
+/* paper texture */
+background-image:
+radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+radial-gradient(rgba(0,0,0,0.05) 1px, transparent 1px),
+linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.04));
+
+background-size:
+4px 4px,
+6px 6px,
+100% 100%;
+
+background-position:
+0 0,
+2px 2px,
+0 0;
 }
 
 footer{
@@ -143,9 +165,6 @@ mobile applications and creative digital tools.
 
 <a href="#apps">Applications</a>
 <a href="#stats">Statistics</a>
-<a href="#releases">Releases</a>
-<a href="#docs">Documentation</a>
-<a href="#community">Community</a>
 <a href="#sketch">Sketch</a>
 
 </nav>
@@ -155,21 +174,6 @@ mobile applications and creative digital tools.
 </header>
 
 <div class="container">
-
-<section>
-
-<div class="card">
-
-<h2>Project Badges</h2>
-
-<span class="badge">Android</span>
-<span class="badge">Experimental Software</span>
-<span class="badge">Active Development</span>
-<span class="badge">Lightweight Apps</span>
-
-</div>
-
-</section>
 
 <section id="stats">
 
@@ -213,12 +217,7 @@ Development Status
 
 <h3>DotArt</h3>
 
-<p>
-DotArt is a lightweight pixel art studio designed for Android devices.
-The goal of DotArt is to provide a fast and responsive pixel art creation
-environment that allows artists to focus on creativity instead of complex
-software interfaces.
-</p>
+<p>Lightweight pixel art studio for Android.</p>
 
 <a class="download"
 href="https://www.mediafire.com/file/i3hh4pgjt4mpo2f/DotArtTest.apk/file">
@@ -229,10 +228,7 @@ Download DotArt Beta
 
 <h3>Viewify</h3>
 
-<p>
-Viewify is a lightweight mobile application built with efficiency and
-simplicity as primary design goals.
-</p>
+<p>Lightweight mobile application with clean interface.</p>
 
 <a class="download"
 href="https://www.mediafire.com/file/c8e6y9072wp5l9u/Viewify_1_1.0_mod+(2)_sign.apk/file">
@@ -243,116 +239,12 @@ Download Viewify
 
 <h3>Purrfect Day</h3>
 
-<p>
-Purrfect Day is an experimental relaxing mobile application focused on
-creating calm digital environments using minimal visual interaction.
-</p>
+<p>Experimental relaxing mobile application.</p>
 
 <a class="download"
 href="https://file.kiwi/c2fc5a37#fdnXWA-VB0sl2O1dNNi6Qg">
 Download Purrfect Day
 </a>
-
-</div>
-
-</section>
-
-<section id="releases">
-
-<div class="card">
-
-<h2>Release Dashboard</h2>
-
-<table width="100%">
-
-<tr>
-<th>Version</th>
-<th>Application</th>
-<th>Status</th>
-</tr>
-
-<tr>
-<td>1.1</td>
-<td>Viewify</td>
-<td>Stable</td>
-</tr>
-
-<tr>
-<td>Beta</td>
-<td>DotArt</td>
-<td>Public Testing</td>
-</tr>
-
-<tr>
-<td>Experimental</td>
-<td>Purrfect Day</td>
-<td>Prototype</td>
-</tr>
-
-</table>
-
-</div>
-
-</section>
-
-<section id="docs">
-
-<div class="card">
-
-<h2>Technical Documentation</h2>
-
-<p>
-The Maneki software ecosystem follows a lightweight modular architecture
-that prioritizes simplicity, performance, and maintainability.
-</p>
-
-<div class="docs">
-
-UI Layer  
-Handles rendering and user interaction.
-
-Logic Layer  
-Processes commands and application state.
-
-Storage Layer  
-Handles local data persistence and project files.
-
-Rendering Engine  
-Used in creative applications such as DotArt
-for efficient pixel rendering.
-
-</div>
-
-<p>
-
-Repository  
-https://github.com/origin-svg/maneki-dev
-
-</p>
-
-<p>
-
-Wiki  
-https://github.com/origin-svg/maneki-dev/wiki
-
-</p>
-
-</div>
-
-</section>
-
-<section id="community">
-
-<div class="card">
-
-<h2>Community and Development Discussions</h2>
-
-<p>
-
-Community Forum  
-https://github.com/origin-svg/maneki-dev/discussions
-
-</p>
 
 </div>
 
@@ -365,8 +257,7 @@ https://github.com/origin-svg/maneki-dev/discussions
 <h2>Offline Sketch Pad</h2>
 
 <p>
-A minimal offline drawing canvas. Use touch or mouse to draw.
-The brush automatically cycles through colors creating a
+Draw with touch or mouse. The brush cycles through colors creating a
 rainbow scratching effect.
 </p>
 
@@ -384,18 +275,7 @@ rainbow scratching effect.
 
 <footer>
 
-<p>
-
-© 2026 Maneki & Co. LLC (招き株式会社)
-
-</p>
-
-<p>
-
-Independent experimental software studio developing lightweight mobile
-applications and creative digital tools.
-
-</p>
+<p>© 2026 Maneki & Co. LLC (招き株式会社)</p>
 
 </footer>
 
@@ -405,8 +285,10 @@ function toggleDark(){
 document.body.classList.toggle("dark")
 }
 
-const canvas = document.getElementById("sketchpad")
-const ctx = canvas.getContext("2d")
+document.addEventListener("DOMContentLoaded",function(){
+
+const canvas=document.getElementById("sketchpad")
+const ctx=canvas.getContext("2d")
 
 let drawing=false
 let hue=0
@@ -425,6 +307,8 @@ function draw(e){
 
 if(!drawing) return
 
+e.preventDefault()
+
 const rect=canvas.getBoundingClientRect()
 
 let x=(e.touches?e.touches[0].clientX:e.clientX)-rect.left
@@ -432,7 +316,6 @@ let y=(e.touches?e.touches[0].clientY:e.clientY)-rect.top
 
 ctx.lineWidth=6
 ctx.lineCap="round"
-
 ctx.strokeStyle=`hsl(${hue},100%,50%)`
 
 ctx.lineTo(x,y)
@@ -442,10 +325,7 @@ ctx.beginPath()
 ctx.moveTo(x,y)
 
 hue++
-
-if(hue>360){
-hue=0
-}
+if(hue>360) hue=0
 
 }
 
@@ -458,9 +338,11 @@ canvas.addEventListener("touchstart",start)
 canvas.addEventListener("touchend",stop)
 canvas.addEventListener("touchmove",draw)
 
-function clearCanvas(){
+window.clearCanvas=function(){
 ctx.clearRect(0,0,canvas.width,canvas.height)
 }
+
+})
 
 </script>
 
