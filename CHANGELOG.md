@@ -1,6 +1,55 @@
 # 📝 Changelog / Registro de Cambios / Änderungsprotokoll / Journal des Modifications
 
+
+
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format follows a modified version of Keep a Changelog
+and adheres to Semantic Versioning whenever possible.
+
 ---
+
+## [2.0.0] - 2026-03-25
+
+### 🚨 Breaking Changes
+- Project renamed from **Purrfect Day** to **GentlePaws**.
+- Updated internal namespaces, configuration paths, and metadata to reflect the new project identity.
+- Legacy references to `PurrfectDay` have been deprecated and removed.
+
+### ✨ Added
+- New branding and project identity.
+- Updated documentation reflecting the GentlePaws ecosystem.
+- New repository metadata and improved project structure.
+- Future-ready architecture for plugin and extension systems.
+
+### 🔧 Changed
+- Refactored internal modules to match the new naming scheme.
+- Improved asset management and resource loading.
+- Updated build configuration and release pipelines.
+
+### 🧹 Removed
+- Deprecated legacy assets tied to the old branding.
+- Unused experimental modules.
+
+### 📦 Internal
+- Repository cleanup and restructuring.
+- Improved CI/CD preparation for future automated builds.
+
+---
+
+## [1.x.x] - Legacy Purrfect Day versions
+
+Initial experimental releases under the **Purrfect Day** name.
+
+These builds were part of early development and testing phases.
+
+
+
+---
+
+
 
 ## 🌐 English / Inglés
 
