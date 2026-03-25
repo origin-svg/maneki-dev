@@ -1,0 +1,46 @@
+name: Automatic Documentation Translation
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'README.md'
+      - 'CHANGELOG.md'
+      - 'docs/**'
+
+jobs:
+  translate_docs:
+    name: Translate README and CHANGELOG
+    runs-on: ubuntu-latest
+    steps:
+
+      ## Step 1: Checkout repository
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      ## Step 2: Setup Python environment
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      ## Step 3: Install dependencies
+      - name: Install Python Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install translate requests
+
+      ## Step 4: Run translation script (free, no API key)
+      - name: Translate Documentation
+        run: |
+          python scripts/translate_docs_free.py
+
+      ## Step 5: Commit translated files
+      - name: Commit Translated Files
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions@github.com"
+          git add docs/
+          git commit -m "Automatic translation update" || echo "No changes to commit"
+          git push origin main
