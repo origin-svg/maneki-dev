@@ -1,4 +1,9 @@
 # Maneki & Co. LLC — Everything You Need To Know About Us ♥️ (Check WIKI FOR MORE)
+We GAMIFIED OUR DOWNLOADS ON RELEASES. Check Your Current Ponts:
+![Download Points](https://img.shields.io/badge/Points-1234-brightgreen)
+
+
+
 🌐 Multilenguaje / Bilingual Support
 Español:
 Todas nuestras aplicaciones y lanzamientos incluyen soporte multilingüe. Esto significa que los usuarios pueden disfrutar de las apps en varios idiomas, y la documentación también está disponible de forma bilingüe o multilanguage para garantizar accesibilidad global.
