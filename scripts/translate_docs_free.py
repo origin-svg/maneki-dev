@@ -1,33 +1,45 @@
 import os
 from translate import Translator
 
-## Files to translate
-files_to_translate = ["README.md", "CHANGELOG.md"]
+MAX_CHARS = 500
 
-## Target languages
+files_to_translate = ["README.md", "CHANGELOG.md"]
 languages = {
-    "es": "es",  # Spanish
-    "fr": "fr",  # French
-    "de": "de",  # German
-    "en": "en"   # English
+    "es": "es",
+    "fr": "fr",
+    "de": "de",
+    "en": "en"
 }
 
-## Loop through files
+def chunk_text(text, max_len=MAX_CHARS):
+    chunks = []
+    while text:
+        chunk = text[:max_len]
+        # Cut The Line If Possible
+        if len(chunk) == max_len and '\n' in chunk:
+            last_newline = chunk.rfind('\n')
+            chunk, text = chunk[:last_newline], text[last_newline:]
+        else:
+            text = text[max_len:]
+        chunks.append(chunk)
+    return chunks
+
 for file_path in files_to_translate:
     with open(file_path, "r", encoding="utf-8") as f:
         content = f.read()
 
     for lang_code, lang_target in languages.items():
-        ## Initialize translator
         translator = Translator(to_lang=lang_target)
-        translated_text = translator.translate(content)
+        translated_chunks = []
 
-        ## Prepare output directory
+        for chunk in chunk_text(content):
+            translated_chunks.append(translator.translate(chunk))
+
+        translated_text = "\n".join(translated_chunks)
+
         output_dir = f"docs/{lang_code}"
         os.makedirs(output_dir, exist_ok=True)
         output_file = os.path.join(output_dir, file_path)
-
-        ## Write translated file
         with open(output_file, "w", encoding="utf-8") as out_f:
             out_f.write(translated_text)
 
