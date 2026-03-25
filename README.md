@@ -4,7 +4,7 @@ Español:
 Todas nuestras aplicaciones y lanzamientos incluyen soporte multilingüe. Esto significa que los usuarios pueden disfrutar de las apps en varios idiomas, y la documentación también está disponible de forma bilingüe o multilanguage para garantizar accesibilidad global.
 
 English:
-All our applications and releases include multilingual support. This means users can enjoy the apps in multiple languages, and documentation is also available bilingually or in multiple languages to ensure global accessibility..
+All our applications and releases include multilingual support. This means users can enjoy the apps in multiple languages, and documentation is also available bilingually or in multiple languages to ensure global accessibility.
 
 
 
