@@ -1,11 +1,13 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8">
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Maneki & Co. LLC</title><style>
 
 :root{
 --bg:#f4f4f4;
 --text:#222;
 --card:#ffffff;
---accent:#2ecc71;
 }
 
 body.dark{
@@ -16,46 +18,40 @@ body.dark{
 
 body{
 margin:0;
-font-family:Arial,Helvetica,sans-serif;
+font-family:Arial, Helvetica, sans-serif;
 background:var(--bg);
 color:var(--text);
-line-height:1.7;
 }
 
 header{
 background:#111;
 color:white;
-padding:35px;
-}
-
-nav{
-margin-top:10px;
+padding:30px;
 }
 
 nav a{
 color:white;
-margin-right:18px;
+margin-right:15px;
 text-decoration:none;
-font-size:15px;
 }
 
 .container{
-max-width:1050px;
+max-width:1000px;
 margin:auto;
 padding:40px;
 }
 
 .card{
 background:var(--card);
-padding:30px;
-margin-bottom:30px;
+padding:25px;
 border-radius:10px;
-box-shadow:0 4px 10px rgba(0,0,0,0.08);
+margin-bottom:30px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
 .stats{
 display:flex;
-gap:25px;
+gap:20px;
 flex-wrap:wrap;
 }
 
@@ -63,8 +59,8 @@ flex-wrap:wrap;
 flex:1;
 background:var(--card);
 padding:20px;
-text-align:center;
 border-radius:8px;
+text-align:center;
 }
 
 canvas{
@@ -75,235 +71,232 @@ margin-top:15px;
 max-width:900px;
 width:100%;
 touch-action:none;
+
+background-color:#2b3440;
+
+background-image:
+radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+radial-gradient(rgba(0,0,0,0.05) 1px, transparent 1px),
+linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.04));
+
+background-size:4px 4px,6px 6px,100% 100%;
+background-position:0 0,2px 2px,0 0;
 }
 
 button{
 padding:8px 14px;
-margin-top:10px;
-margin-right:8px;
-cursor:pointer;
 border:none;
 border-radius:6px;
 background:#333;
 color:white;
+cursor:pointer;
+margin-top:10px;
+margin-right:8px;
 }
 
-button:hover{
-opacity:0.85;
+.download{
+display:inline-block;
+background:#2ecc71;
+color:white;
+padding:10px 16px;
+border-radius:6px;
+text-decoration:none;
+margin-top:10px;
 }
 
 #clickDot{
 width:60px;
 height:60px;
 border-radius:50%;
-position:relative;
 background:red;
-margin-top:20px;
+position:absolute;
 display:none;
 }
 
 #reactionBox{
-width:100%;
 height:120px;
 border-radius:10px;
-margin-top:15px;
 display:flex;
 align-items:center;
 justify-content:center;
+background:#c0392b;
 color:white;
 font-weight:bold;
+margin-top:10px;
 cursor:pointer;
-background:#c0392b;
 }
 
 footer{
 background:#111;
 color:#aaa;
-padding:35px;
-margin-top:60px;
+padding:30px;
 }
 
-</style></head><body><header><h1>Maneki & Co. LLC (招き株式会社)</h1><p>
-Experimental mobile software studio building lightweight apps and creative tools.
-</p><nav>
-<a href="#stats">Statistics</a>
+</style></head><body><header><h1>Maneki & Co. LLC</h1>
+<p>Experimental mobile software studio</p><nav>
+<a href="#downloads">Apps</a>
 <a href="#sketch">Sketch</a>
 <a href="#clicker">Dot Clicker</a>
 <a href="#reaction">Reaction Test</a>
 </nav><button onclick="toggleDark()">Toggle Dark Mode</button>
 
-</header><div class="container"><section id="stats"><div class="card"><h2>Project Statistics</h2><div class="stats"><div class="stat"><h3>3</h3>Applications</div>
-<div class="stat"><h3>1200+</h3>Downloads</div>
-<div class="stat"><h3>5</h3>Releases</div>
-<div class="stat"><h3>Active</h3>Status</div></div></div></section><section id="sketch"><div class="card"><h2>Offline Sketch Pad</h2><p>Draw using touch or mouse. Export drawings as PNG.</p><canvas id="sketchpad" width="900" height="400"></canvas>
+</header><div class="container"><section id="downloads"><div class="card"><h2>Applications</h2><p>Download our Android APK applications.</p><h3>DotArt</h3>
+<p>Lightweight pixel art editor for Android.</p><a class="download"
+href="https://www.mediafire.com/file/i3hh4pgjt4mpo2f/DotArtTest.apk/file"
+download="DotArt.apk">
+Download DotArt APK
+</a>
 
-<br><button onclick="clearCanvas()">Clear</button>
-<button onclick="exportPNG()">Export PNG</button>
+<hr><h3>Viewify</h3>
+<p>Minimal viewer application for Android.</p><a class="download"
+href="https://www.mediafire.com/file/c8e6y9072wp5l9u/Viewify_1_1.0_mod+(2)_sign.apk/file"
+download="Viewify.apk">
+Download Viewify APK
+</a>
 
-</div></section><section id="clicker"><div class="card"><h2>Dot Clicker</h2><p>Click the dot as fast as possible when it appears.</p><button onclick="startClicker()">Start Game</button>
+<hr><h3>Purrfect Day</h3>
+<p>Experimental relaxing application.</p><a class="download"
+href="https://file.kiwi/c2fc5a37#fdnXWA-VB0sl2O1dNNi6Qg"
+download="PurrfectDay.apk">
+Download Purrfect Day APK
+</a>
 
-<div id="clickDot"></div><p id="clickScore"></p></div></section><section id="reaction"><div class="card"><h2>Reaction Time Test</h2><p>Click the box when it turns green.</p><div id="reactionBox">Click to Start</div><p id="reactionResult"></p></div></section></div><footer>
-<p>© 2026 Maneki & Co. LLC</p>
-</footer><script>
+</div></section><section id="sketch"><div class="card"><h2>Sketch Pad</h2><canvas id="sketchpad" width="900" height="400"></canvas>
+
+<button onclick="clearCanvas()">Clear</button>
+<button onclick="downloadPNG()">Export PNG</button>
+
+</div></section><section id="clicker"><div class="card"><h2>Dot Clicker</h2><button onclick="startClicker()">Start</button>
+
+<p id="scoreText"></p><div id="clickDot"></div></div></section><section id="reaction"><div class="card"><h2>Reaction Time Test</h2><div id="reactionBox">Click to Start</div><p id="reactionResult"></p></div></section></div><footer><p>© 2026 Maneki & Co. LLC</p></footer><script>
+
+/* DARK MODE */
 
 function toggleDark(){
-document.body.classList.toggle("dark")
+document.body.classList.toggle("dark");
 }
 
-/* ================= Sketch Pad ================= */
+/* SKETCH PAD */
 
-document.addEventListener("DOMContentLoaded",function(){
+const canvas=document.getElementById("sketchpad");
+const ctx=canvas.getContext("2d");
 
-const canvas=document.getElementById("sketchpad")
-const ctx=canvas.getContext("2d")
+let drawing=false;
 
-let drawing=false
-let hue=0
+canvas.addEventListener("mousedown",()=>drawing=true);
+canvas.addEventListener("mouseup",()=>drawing=false);
 
-function drawPaper(){
+canvas.addEventListener("mousemove",draw);
 
-ctx.fillStyle="#2b3440"
-ctx.fillRect(0,0,canvas.width,canvas.height)
-
-for(let i=0;i<5000;i++){
-let x=Math.random()*canvas.width
-let y=Math.random()*canvas.height
-let a=Math.random()*0.05
-ctx.fillStyle="rgba(255,255,255,"+a+")"
-ctx.fillRect(x,y,1,1)
-}
-
-}
-
-drawPaper()
-
-function start(e){
-drawing=true
-draw(e)
-}
-
-function stop(){
-drawing=false
-ctx.beginPath()
-}
+canvas.addEventListener("touchstart",()=>drawing=true);
+canvas.addEventListener("touchend",()=>drawing=false);
+canvas.addEventListener("touchmove",drawTouch);
 
 function draw(e){
 
-if(!drawing) return
+if(!drawing) return;
 
-const rect=canvas.getBoundingClientRect()
+ctx.lineWidth=3;
+ctx.lineCap="round";
+ctx.strokeStyle="white";
 
-let x=(e.touches?e.touches[0].clientX:e.clientX)-rect.left
-let y=(e.touches?e.touches[0].clientY:e.clientY)-rect.top
-
-ctx.lineWidth=6
-ctx.lineCap="round"
-ctx.strokeStyle=`hsl(${hue},100%,50%)`
-
-ctx.lineTo(x,y)
-ctx.stroke()
-
-ctx.beginPath()
-ctx.moveTo(x,y)
-
-hue++
-if(hue>360) hue=0
+ctx.lineTo(e.offsetX,e.offsetY);
+ctx.stroke();
+ctx.beginPath();
+ctx.moveTo(e.offsetX,e.offsetY);
 
 }
 
-canvas.addEventListener("mousedown",start)
-canvas.addEventListener("mouseup",stop)
-canvas.addEventListener("mouseout",stop)
-canvas.addEventListener("mousemove",draw)
+function drawTouch(e){
 
-canvas.addEventListener("touchstart",start)
-canvas.addEventListener("touchend",stop)
-canvas.addEventListener("touchmove",draw)
+e.preventDefault();
 
-window.clearCanvas=function(){
-ctx.clearRect(0,0,canvas.width,canvas.height)
-drawPaper()
+const rect=canvas.getBoundingClientRect();
+const x=e.touches[0].clientX-rect.left;
+const y=e.touches[0].clientY-rect.top;
+
+ctx.lineWidth=3;
+ctx.lineCap="round";
+ctx.strokeStyle="white";
+
+ctx.lineTo(x,y);
+ctx.stroke();
+ctx.beginPath();
+ctx.moveTo(x,y);
+
 }
 
-window.exportPNG=function(){
-let link=document.createElement("a")
-link.download="maneki-sketch.png"
-link.href=canvas.toDataURL()
-link.click()
+function clearCanvas(){
+ctx.clearRect(0,0,canvas.width,canvas.height);
 }
 
-})
+function downloadPNG(){
 
-/*Dot Clicker*/
+const link=document.createElement("a");
+link.download="sketch.png";
+link.href=canvas.toDataURL();
+link.click();
 
-let clickScore=0
+}
+
+/* DOT CLICKER */
+
+let score=0;
 
 function startClicker(){
 
-clickScore=0
-document.getElementById("clickScore").innerText="Score: 0"
-spawnDot()
+score=0;
+spawnDot();
 
 }
 
 function spawnDot(){
 
-const dot=document.getElementById("clickDot")
+const dot=document.getElementById("clickDot");
 
-dot.style.display="block"
+dot.style.display="block";
 
-let x=Math.random()*300
-let y=Math.random()*150
+dot.style.left=Math.random()*80+"%";
+dot.style.top=Math.random()*60+"%";
 
-dot.style.left=x+"px"
-dot.style.top=y+"px"
+dot.onclick=function(){
 
-}
+score++;
+document.getElementById("scoreText").innerText="Score: "+score;
 
-document.getElementById("clickDot").onclick=function(){
-
-clickScore++
-
-document.getElementById("clickScore").innerText="Score: "+clickScore
-
-spawnDot()
+spawnDot();
 
 }
 
-/* Reaction Test */
+}
 
-let reactionStart
+/* REACTION TEST */
 
-const box=document.getElementById("reactionBox")
+let startTime=0;
+
+const box=document.getElementById("reactionBox");
 
 box.onclick=function(){
 
-if(box.dataset.state==="ready"){
-
-let time=Date.now()-reactionStart
-
-document.getElementById("reactionResult").innerText="Reaction Time: "+time+" ms"
-
-box.style.background="#c0392b"
-box.innerText="Click to Start"
-
-box.dataset.state="idle"
-
-return
-
-}
-
-box.innerText="Wait..."
-box.style.background="#e67e22"
+box.innerText="Wait...";
+box.style.background="orange";
 
 setTimeout(()=>{
 
-reactionStart=Date.now()
+box.style.background="green";
+box.innerText="CLICK!";
+startTime=Date.now();
 
-box.style.background="#27ae60"
-box.innerText="CLICK!"
+box.onclick=function(){
 
-box.dataset.state="ready"
+const reaction=Date.now()-startTime;
+
+document.getElementById("reactionResult").innerText="Reaction: "+reaction+" ms";
+
+box.innerText="Click to try again";
+box.style.background="#c0392b";
+
+}
 
 },Math.random()*3000+1000)
 
