@@ -1,5 +1,4 @@
 # Maneki & Co. LLC — Everything You Need To Know About Us ♥️ (Check WIKI FOR MORE)
-We GAMIFIED OUR DOWNLOADS ON RELEASES. Check Your Current Points:
 ![Download Points](https://img.shields.io/badge/Points-1234-brightgreen)
 
 
