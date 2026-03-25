@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-
-<meta charset="UTF-8">
-<title>Maneki & Co. LLC</title>
-
-<style>
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Maneki & Co. LLC</title><style>
 
 :root{
 --bg:#f4f4f4;
@@ -93,44 +86,30 @@ text-align:center;
 border-radius:8px;
 }
 
-.docs{
-background:#0f0f0f;
-color:#00ff88;
-padding:25px;
-border-radius:8px;
-font-family:monospace;
-overflow:auto;
-}
-
-/* CANVAS */
-
 #sketchpad{
-border-radius:8px;
-border:1px solid #6b7686;
-touch-action:none;
+border-radius:10px;
+border:1px solid #5a6475;
 display:block;
 margin-top:15px;
 width:100%;
 max-width:900px;
+cursor:crosshair;
+touch-action:none;
+}
 
-/* base color */
-background-color:#2b3440;
+button{
+padding:8px 14px;
+margin-top:10px;
+margin-right:8px;
+cursor:pointer;
+border:none;
+border-radius:6px;
+background:#333;
+color:white;
+}
 
-/* paper texture */
-background-image:
-radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-radial-gradient(rgba(0,0,0,0.05) 1px, transparent 1px),
-linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.04));
-
-background-size:
-4px 4px,
-6px 6px,
-100% 100%;
-
-background-position:
-0 0,
-2px 2px,
-0 0;
+button:hover{
+opacity:0.85;
 }
 
 footer{
@@ -140,146 +119,41 @@ padding:35px;
 margin-top:60px;
 }
 
-button{
-padding:7px 12px;
-margin-top:10px;
-cursor:pointer;
-}
-
-</style>
-
-</head>
-
-<body>
-
-<header>
-
-<h1>Maneki & Co. LLC (招き株式会社)</h1>
-
-<p>
+</style></head><body><header><h1>Maneki & Co. LLC (招き株式会社)</h1><p>
 Independent experimental software studio dedicated to building lightweight
 mobile applications and creative digital tools.
-</p>
-
-<nav>
-
+</p><nav>
 <a href="#apps">Applications</a>
 <a href="#stats">Statistics</a>
 <a href="#sketch">Sketch</a>
+</nav><button onclick="toggleDark()">Toggle Dark Mode</button>
 
-</nav>
-
-<button onclick="toggleDark()">Toggle Dark Mode</button>
-
-</header>
-
-<div class="container">
-
-<section id="stats">
-
-<div class="card">
-
-<h2>Project Statistics</h2>
-
-<div class="stats">
-
-<div class="stat">
+</header><div class="container"><section id="stats"><div class="card"><h2>Project Statistics</h2><div class="stats"><div class="stat">
 <h3>3</h3>
 Applications
-</div>
-
-<div class="stat">
+</div><div class="stat">
 <h3>1200+</h3>
 Estimated Downloads
-</div>
-
-<div class="stat">
+</div><div class="stat">
 <h3>5</h3>
 Releases
-</div>
-
-<div class="stat">
+</div><div class="stat">
 <h3>Active</h3>
 Development Status
-</div>
+</div></div></div></section><section id="apps"><div class="card"><h2>Applications</h2><h3>DotArt</h3>
+<p>Lightweight pixel art studio for Android.</p><h3>Viewify</h3>
+<p>Lightweight mobile interface application.</p><h3>Purrfect Day</h3>
+<p>Experimental relaxing environment application.</p></div></section><section id="sketch"><div class="card"><h2>Offline Sketch Pad</h2><p>
+Draw using touch or mouse. The brush cycles through colors creating
+a rainbow scratching effect. Drawings can be exported as PNG.
+</p><canvas id="sketchpad" width="900" height="400"></canvas>
 
-</div>
+<br><button onclick="clearCanvas()">Clear</button>
+<button onclick="exportPNG()">Export PNG</button>
 
-</div>
-
-</section>
-
-<section id="apps">
-
-<div class="card">
-
-<h2>Applications</h2>
-
-<h3>DotArt</h3>
-
-<p>Lightweight pixel art studio for Android.</p>
-
-<a class="download"
-href="https://www.mediafire.com/file/i3hh4pgjt4mpo2f/DotArtTest.apk/file">
-Download DotArt Beta
-</a>
-
-<hr>
-
-<h3>Viewify</h3>
-
-<p>Lightweight mobile application with clean interface.</p>
-
-<a class="download"
-href="https://www.mediafire.com/file/c8e6y9072wp5l9u/Viewify_1_1.0_mod+(2)_sign.apk/file">
-Download Viewify
-</a>
-
-<hr>
-
-<h3>Purrfect Day</h3>
-
-<p>Experimental relaxing mobile application.</p>
-
-<a class="download"
-href="https://file.kiwi/c2fc5a37#fdnXWA-VB0sl2O1dNNi6Qg">
-Download Purrfect Day
-</a>
-
-</div>
-
-</section>
-
-<section id="sketch">
-
-<div class="card">
-
-<h2>Offline Sketch Pad</h2>
-
-<p>
-Draw with touch or mouse. The brush cycles through colors creating a
-rainbow scratching effect.
-</p>
-
-<canvas id="sketchpad" width="900" height="400"></canvas>
-
-<br>
-
-<button onclick="clearCanvas()">Clear Canvas</button>
-
-</div>
-
-</section>
-
-</div>
-
-<footer>
-
+</div></section></div><footer>
 <p>© 2026 Maneki & Co. LLC (招き株式会社)</p>
-
-</footer>
-
-<script>
+</footer><script>
 
 function toggleDark(){
 document.body.classList.toggle("dark")
@@ -292,6 +166,30 @@ const ctx=canvas.getContext("2d")
 
 let drawing=false
 let hue=0
+
+function drawPaperTexture(){
+
+ctx.fillStyle="#2b3440"
+ctx.fillRect(0,0,canvas.width,canvas.height)
+
+for(let i=0;i<6000;i++){
+
+let x=Math.random()*canvas.width
+let y=Math.random()*canvas.height
+
+let alpha=Math.random()*0.05
+
+ctx.fillStyle="rgba(255,255,255,"+alpha+")"
+ctx.fillRect(x,y,1,1)
+
+ctx.fillStyle="rgba(0,0,0,"+alpha+")"
+ctx.fillRect(x+1,y+1,1,1)
+
+}
+
+}
+
+drawPaperTexture()
 
 function start(e){
 drawing=true
@@ -339,12 +237,22 @@ canvas.addEventListener("touchend",stop)
 canvas.addEventListener("touchmove",draw)
 
 window.clearCanvas=function(){
+
 ctx.clearRect(0,0,canvas.width,canvas.height)
+drawPaperTexture()
+
+}
+
+window.exportPNG=function(){
+
+let link=document.createElement("a")
+link.download="maneki-sketch.png"
+link.href=canvas.toDataURL()
+link.click()
+
 }
 
 })
 
-</script>
-
-</body>
+</script></body>
 </html>
